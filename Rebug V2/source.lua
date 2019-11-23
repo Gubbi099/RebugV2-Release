@@ -13,9 +13,6 @@
 
 Backdoor controller created by Project Rebug. The code for this script
 has been made organised for better understanding.
-
-Project Rebug: 2016-2019
-
 ---------------------------------------------------------
 // Coded By ProjectRebug Login Release Source
 // https://github.com/Void09/Login-Release
@@ -24,9 +21,10 @@ Project Rebug: 2016-2019
 // to by downloading.
 // Copyright © ProjectRebug 2019
 // Licenced under © GNU licence here
-// https://github.com/Void09/Login-Release/blob/master/LICENSE
+// https://github.com/ProjectRebug/RebugV2-Release/blob/master/LICENSE
 ---------------------------------------------------------
 
+Project Rebug: 2016-2019
 =======================================================================*/
 
 surface.CreateFont("MenuFont", {
