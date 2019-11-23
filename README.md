@@ -1,4 +1,4 @@
-# Lua Login
+# Rebug V2
 
 
 ![Foo](https://i.imgur.com/f0ApXbe.png)
