@@ -1,2 +1,46 @@
-# RebugV2-Release
-Garry's Mod Backdoor Menu
+# Lua Login
+
+
+![Foo](https://i.imgur.com/f0ApXbe.png)
+
+This script was created a month after version 1 release. We have heavily updated it by adding lots more features detections methods and protections such as anti-screengrab and anti-stream. 
+The coding for Rebug v2 has made organised to give people a better understanding of what some functions and features actually do. This project will still receive updates after release
+
+![Foo](https://i.imgur.com/rlxFY4G.png)
+
+* ScreenGrab Protection
+* Stream Protection
+* Backdoor Features +100
+* SoundBoard - Custom URL
+* User friendly
+
+## Installation
+
+To use rebug you can choose one of the methods below to active the script the most secure version is 'DLL' but it can be buggy sometimes. The 'LUA' version however isn't buggy and works most the time, the only issue is that it can sometimes get detected.
+
+#### LUA
+* Place the folder 'external' in your documents folder
+* Load up Garry's mod and join any multiplayer server
+* Open Extreme Injector and type 'hl2.exe' for process name and drag the file 'qrexternal.dll' into the second box then press inject.
+* Open console and type 'qrextern rebug.lua'
+* Press the insert key to open/close
+
+#### DLL
+
+* Place the folder 'rebug' anywhere you want
+* Load up Garry's mod and join any multiplayer server
+* Open Extreme Injector and type 'hl2.exe' for process name and drag the file 'rebug.dll' into the second box then press inject
+* After press the insert key to open/close
+
+
+
+## Images
+
+#### Main Menu
+![Foo](https://i.imgur.com/uEXp2dj.png)
+#### Detections
+![Foo](https://i.imgur.com/dkUJKdN.png)
+#### SoundBoard
+![Foo](https://i.imgur.com/cG5JOw1.png)
+#### File Downloader
+![Foo](https://i.imgur.com/QfwqbJu.png)
