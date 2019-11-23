@@ -16,7 +16,16 @@ has been made organised for better understanding.
 
 Project Rebug: 2016-2019
 
-Licenced Under: GPL-3.0
+---------------------------------------------------------
+// Coded By ProjectRebug Login Release Source
+// https://github.com/Void09/Login-Release
+// Note to the person using this, removing this
+// text is in violation of the licence you agreed
+// to by downloading.
+// Copyright © ProjectRebug 2019
+// Licenced under © GNU licence here
+// https://github.com/Void09/Login-Release/blob/master/LICENSE
+---------------------------------------------------------
 
 =======================================================================*/
 
