@@ -386,17 +386,6 @@ NetWorks
         return status
     end
 
-    local function playSound(url)
-        sound.PlayURL(url, '', function(station)
-            if (IsValid(station)) then
-                station:SetPos(LocalPlayer():GetPos())
-                station:Play()
-            end
-        end)
-    end
-
-    --playSound("https://rvac.cc/sound/earth.mp3")
-	
 	local function rndstr(len)
 		if len == nil then len = 5 end
 		local chars = string.Split("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789", "")
