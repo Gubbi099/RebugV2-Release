@@ -33,7 +33,7 @@ To use rebug you can choose one of the methods below to active the script the mo
 * After press the insert key to open/close
 
 ## Licence
-This repo is listed with [GNU license](https://github.com/Void09/Login-Release/blob/master/LICENSE) which allows this to be used for private use modification of the source BUT this does NOT allow us to be liable as the source doesn't offer any warranty.
+This repo is listed with [GNU license](https://github.com/Void09/Login-Release/blob/master/LICENSE) which allows this to be used for private use, modification of the source BUT this does NOT allow us to be liable as the source doesn't offer any warranty. Downloading this repo also means that you agree to the licence.
 
 ## Images
 
