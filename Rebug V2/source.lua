@@ -2305,10 +2305,7 @@ Panels 3 : Targeting
 		
         rebug.AddButton("Give Weapons", Bar3, function()
             surface.PlaySound("buttons/button18.wav")
-            noob.PostLua([[local weps = Player("]]..selPly..[[");weps:Give('weapon_stunstick')
-				weps:Give('lockpick');weps:Give('m9k_vector');weps:Give('m9k_dbarrel');weps:Give('m9k_barret_m82')
-				weps:Give('m9k_glock');weps:Give('m9k_minigun');weps:Give('m9k_acr');weps:Give('m9k_milkormgl')
-				weps:Give('weapon_rpg');weps:Give('weapon_medkit')]])
+            noob.PostLua([[local weps = Player("]]..selPly..[[")]])
 		end)
 		
         rebug.AddButton("Remove User", Bar3, function()
