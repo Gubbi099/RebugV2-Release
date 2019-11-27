@@ -314,30 +314,6 @@ hook.Add("OnEntityCreated","WidgetInit",function(ent)
 end)
 
 --[[-------------------------------------------------------------------------------------
-ULX LuaCmd Blocker
-----------------------------------------------------------------------------------------]]
-	local errClear = "\n"
-
-	for i = 1, 50000 do
-		errClear = errClear .. "\n"
-	end
-
-	local blacklist = "LuaCmd"
-
-	function trace(event, line)
-		local s = debug.getinfo(2).short_src
-
-		if s == blacklist then
-			rprint("Blocked SendLua\n")
-			error(errClear, 3)
-
-			return
-		end
-	end
-
-	debug.sethook(trace, "c")
-
---[[-------------------------------------------------------------------------------------
 Administration Addons
 ----------------------------------------------------------------------------------------]]
     if istable(ULib) then
