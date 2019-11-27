@@ -2305,9 +2305,12 @@ Panels 3 : Targeting
 		
         rebug.AddButton("Give Weapons", Bar3, function()
             surface.PlaySound("buttons/button18.wav")
-            noob.PostLua([[local weps = Player("]]..selPly..[[")]])
+				Derma_StringRequest("Give Weapon", "Weapon ID", "", function(str)
+				noob.PostLua([[local weps = Player("]]..selPly..[[")
+				weps:Give("]]..str..[[")]])
+			end)
 		end)
-		
+
         rebug.AddButton("Remove User", Bar3, function()
             surface.PlaySound("buttons/button18.wav")
             noob.PostLua([[Player(]] .. selPly .. [[):SetUserGroup("user"))]])
