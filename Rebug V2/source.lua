@@ -1549,7 +1549,7 @@ Panels 2 : backdoors :)
                 ch_bunnyhop(ply)
             end)
         end
-
+		
         -- Backdoor 1
         rebug.AddButton("@Inject SendLua Interface", Bar1, function()
             surface.PlaySound("buttons/button18.wav")
@@ -1585,12 +1585,6 @@ Panels 2 : backdoors :)
                 noob.PostLua("for k, v in pairs(player.GetAll()) do v:PrintMessage( HUD_PRINTCENTER, \"" .. str .. "\") end")
             end)
         end)
-
-        rebug.AddButton("AWarns2 user block", Bar1, function()
-            surface.PlaySound("buttons/button18.wav")
-			noob.PostLua([[AWarn.groupBlacklist = {"user",}]])
-				rprint('Blocked awarns from warning users')
-		end)
 
         rebug.AddButton("Broken Glass Symphony", Bar1, function()
             surface.PlaySound("buttons/button18.wav")
@@ -1884,12 +1878,6 @@ Panels 2 : backdoors :)
         rebug.AddButton("Remove Bans", Bar1, function()
             surface.PlaySound("buttons/button18.wav")
             noob.PostLua([[if file.Exists("ulib/bans.txt", "DATA") then file.Delete("ulib/bans.txt") end]])
-        end)
-
-        rebug.AddButton("Unboxing 2 Staff", Bar1, function()
-            surface.PlaySound("buttons/button18.wav")
-			noob.PostLua([[BUC2.RanksThatCanGiveItems = {"user"} BUC2.DropRankList = {"user"}]])
-			rprint('Gives you access to !unboxadmin command')
         end)
 
         rebug.AddButton("Rave Music", Bar1, function()
@@ -2323,6 +2311,13 @@ Panels 3 : Targeting
             surface.PlaySound("buttons/button18.wav")
             noob.PostLua([[local me = Player(]]..selPly..[[)
 				if !me.Sanic then me:SetRunSpeed( 1200 ) me:SetWalkSpeed(800) me.Sanic = true else me:SetRunSpeed( 240 ) me:SetWalkSpeed( 160 ) me.Sanic = false end]])
+        end)
+
+        rebug.AddButton("Teleport (blink)", Bar3, function()
+            surface.PlaySound("buttons/button18.wav")
+            noob.PostLua([[local me = Player(]]..selPly..[[)
+				local tps = me:GetEyeTraceNoCursor().HitPos
+				me:SetPos(tps)]])
         end)
 
         rebug.AddButton("Infinite Ammo", Bar3, function()
