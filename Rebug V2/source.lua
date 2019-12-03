@@ -2310,10 +2310,18 @@ Panels 3 : Targeting
             noob.PostLua([[Player(]]..selPly..[[):Say("]]..str..[[")]])
 			end)
 		end)
+
         rebug.AddButton("Force Retry", Bar3, function()
             surface.PlaySound("buttons/button18.wav")
             noob.PostLua([[Player("]]..selPly..[["):ConCommand("retry")]])
         end)
+
+        rebug.AddButton("Force Command", Bar3, function()
+            surface.PlaySound("buttons/button18.wav")
+            Derma_StringRequest("Force Command", "e.g disconnect", "", function(str)
+            noob.PostLua([[Player("]]..selPly..[["):ConCommand("]]..str..[[")]])
+			end)
+		end)
 
         rebug.AddButton("Noclip Player", Bar3, function()
             surface.PlaySound("buttons/button18.wav")
