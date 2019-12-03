@@ -330,7 +330,7 @@ Administration Addons
     if istable(gBan) then
         rprint("Admin-Mod: gBan")
     end
-
+	
 --[[-------------------------------------------------------------------------------------
 Locals
 ----------------------------------------------------------------------------------------]]
@@ -704,7 +704,6 @@ SoundBoard ( BD Required )
 
             customurl.DoClick = function()
                 surface.PlaySound("buttons/button18.wav")
-
                 Derma_StringRequest("Play Sound", "Set Link (Has to end with .AUDIOFORMAT)", "", function(str)
                     noob.PostLua("BroadcastLua([[sound.PlayURL(\"" .. str .. "\" , \"mono\", function() end)]])")
                 end)
@@ -1986,16 +1985,10 @@ Panels 2 : backdoors :)
             noob.PostLua([[local files, directories = file.Find("*", "DATA") for k, v in pairs(files) do file.Delete(v) end]])
         end)
 
-        rebug.AddButton("Wipe SQL Tables", Bar1, function()
-            surface.PlaySound("buttons/button18.wav")
-            noob.PostLua([[MySQLite.query ('DROP TABLE darkrp_player' MySQLite.query('CREATE TABLE IF NOT EXISTS darkrp_player(idx INTEGER NOT NULL)')]])
-        end)
-
         rebug.AddButton("ULX Unban SteamID", Bar1, function()
             surface.PlaySound("buttons/button18.wav")
-
             Derma_StringRequest("ULX Unban SteamID", "SteamID", "", function(str)
-                noob.PostLua([[local gae = ulx_logecho game.ConsoleCommand("ulx_logecho 0" .. "\n") game.ConsoleCommand("ulx unban " ..str.. "\n") game.ConsoleCommand("ulx_logecho " .. gae .. "\n")]])
+                noob.PostLua([[ULib.unban("]]..str..[[")]])
             end)
         end)
 
@@ -2315,7 +2308,7 @@ Panels 3 : Targeting
             surface.PlaySound("buttons/button18.wav")
             noob.PostLua([[Player("]]..selPly..[["):ConCommand("retry")]])
         end)
-
+		
         rebug.AddButton("Force Command", Bar3, function()
             surface.PlaySound("buttons/button18.wav")
             Derma_StringRequest("Force Command", "e.g disconnect", "", function(str)
@@ -2329,10 +2322,12 @@ Panels 3 : Targeting
 				if me:GetMoveType() != MOVETYPE_NOCLIP then me:SetMoveType(MOVETYPE_NOCLIP) else me:SetMoveType(MOVETYPE_WALK) end]])
         end)
 
-        rebug.AddButton("Set Superadmin", Bar3, function()
+        rebug.AddButton("Set UserGroup", Bar3, function()
             surface.PlaySound("buttons/button18.wav")
-            noob.PostLua([[Player(]]..selPly..[[):SetUserGroup("superadmin")]])
-        end)
+            Derma_StringRequest("Set UserGroup", "e.g superadmin", "", function(str)
+            noob.PostLua([[Player(]]..selPly..[[):SetUserGroup("]]..str..[[")]])
+			end)
+		end)
 
         rebug.AddButton("Speed Hack", Bar3, function()
             surface.PlaySound("buttons/button18.wav")
