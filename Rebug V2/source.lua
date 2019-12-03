@@ -13,7 +13,7 @@
 
 Backdoor controller created by Project Rebug. The code for this script
 has been made organised for better understanding.
----------------------------------------------------------
+
 // Coded By ProjectRebug Login Release Source
 // https://github.com/ProjectRebug/RebugV2-Release
 // Note to the person using this, removing this
@@ -22,7 +22,6 @@ has been made organised for better understanding.
 // Copyright © ProjectRebug 2019
 // Licenced under © GNU licence here
 // https://github.com/ProjectRebug/RebugV2-Release/blob/master/LICENSE
----------------------------------------------------------
 
 Project Rebug: 2016-2019
 =======================================================================*/
@@ -1215,6 +1214,26 @@ AntiCheat Detection
                     desc = "Used to be a paid gmodstore addon BUT now is on github for lack of updates, This was a shit addon anyways \ndoesn't surprise me that its on github now lol.",
                     scan = function()
                         if file.Exists("plogs_cfg.lua", "LUA") or file.Exists("plogs_mysql_cfg.lua", "LUA") or file.Exists("autorun/plogs_init.lua", "LUA") then
+                            return true
+                        else
+                            return false
+                        end
+                    end
+                },
+                ["AWarn2 Warning System"] = {
+                    desc = "Gmodstore addon that is still popular to this day, You will likely find this\n on any server you join tbh",
+                    scan = function()
+                        if file.Exists("autorun/sh_awarn.lua", "LUA") or file.Exists("autorun/sh_localization.lua", "LUA") or file.Exists("autorun/client/cl_awarn_newmenu.lua", "LUA") then
+                            return true
+                        else
+                            return false
+                        end
+                    end
+                },
+                ["AWarn3 Warning System"] = {
+                    desc = "A recently made gmodstore addon and has became quiet popular with 300 downloads already,\n this will most likely start to be on most servers you join",
+                    scan = function()
+                        if file.Exists("autorun/awarn3.lua", "LUA") or file.Exists("includes/awarn3_blacklists.lua", "LUA") or file.Exists("includes/awarn3_permissions.lua", "LUA") then
                             return true
                         else
                             return false
