@@ -194,7 +194,7 @@ timer.Simple(3, function()
         if not table.HasValue(badcmds, cmd) then
             return old_rcc(cmd, ...)
         else
-            rprint("A malicious command has successfully been blocked by a Wolf.")
+            rprint("A malicious command has successfully been blocked")
             surface.PlaySound("buttons/lightswitch2.wav")
 
             return
