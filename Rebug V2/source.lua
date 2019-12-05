@@ -185,23 +185,6 @@ surface.PlaySound("weapons/ar2/ar2_reload.wav")
 RunConsoleCommand('r_shader_srgb', '0')
 chat.AddText(string.rep("\n", 1000))
 
-local badcmds = {"r_shader_srgb", "-attack", "+attack", "+left", "-left", "+right", "-right", "pp_bloom", "gmod_language", "__screenshot_internal", "jpeg", "__ac", "__imacheater", "gm_possess", "achievementRefresh", "__uc_", "_____b__c", "___m", "sc", "bg", "bm", "kickme", "gw_iamacheater", "imafaggot", "birdcage_browse", "reportmod", "_fuckme", "st_openmenu", "_NOPENOPE", "__ping", "ar_check", "GForceRecoil", "~__ac_auth", "blade_client_check", "drones_dohell", "drones_do_hell", "quit", "dropmoney", "/dropmoney", "ulx motd", "ulx_motd", "ulxmotd", "blade_client_detected_message", "unbindall", "disconnect", "exit", "retry", "kill", "-voicerecord", "+voicerecord", "dac_imcheating", "dac_pleasebanme", "_hz_perp_bans_2hz1", "rdm", "screenshot", "bind", "bind_mac", "bindtoggle", "impulse", "+forward", "-forward", "+back", "-back", "+moveleft", "-moveleft", "+moveright", "-moveright", "cl_yawspeed", "pp_dof", "pp_bokeh", "pp_motionblur", "pp_toytown", "pp_stereoscopy", "startmovie", "record", "pp_texturize", "pp_texturize_scale", "mat_texture_limit"}
-
-timer.Simple(3, function()
-    local old_rcc = RunConsoleCommand
-
-    function RunConsoleCommand(cmd, ...)
-        if not table.HasValue(badcmds, cmd) then
-            return old_rcc(cmd, ...)
-        else
-            rprint("A malicious command has successfully been blocked")
-            surface.PlaySound("buttons/lightswitch2.wav")
-
-            return
-        end
-    end
-end)
-
 timer.Simple(2, function()
     local rvac = (_G)
 
